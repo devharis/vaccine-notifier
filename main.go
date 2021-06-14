@@ -136,7 +136,6 @@ func search(ch chan struct{}) {
 		for _, timeslot := range timeslots {
 			for _, slot := range timeslot.Slots {
 				if slot.Available {
-					fmt.Printf("Ledig tid %s, %s finns vid %s som ligger på adressen %s\n\n %s", timeslot.Date, slot.When, location.name, location.address, location.link)
 					message := fmt.Sprintf("Ledig tid %s, %s finns vid %s som ligger på adressen %s\n\n %s", timeslot.Date, slot.When, location.name, location.address, location.link)
 					notify(message)
 				}
